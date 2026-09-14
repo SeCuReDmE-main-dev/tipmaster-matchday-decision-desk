@@ -14,37 +14,43 @@
     <header class="hero">
       <nav aria-label="Hauptnavigation">
         <div class="brand"><img class="brand-logo" src="https://tipmaster.net/img/tm-logo.png" alt="Tipmaster" /><span class="concept-label">MATCHDAY LAB</span></div>
-        <div class="status"><span class="pulse"></span><span id="agent-status">UI ready · checking WebMCP</span></div>
+        <div class="nav-actions">
+          <div class="status"><span class="pulse"></span><span id="agent-status">UI ready · checking WebMCP</span></div>
+          <button class="language-toggle" id="language-toggle" aria-label="Switch to English">EN</button>
+          <a class="nav-link" href="https://tipmaster.net/daily/en/signin">Sign in</a>
+          <a class="signup-link" href="https://tipmaster.net/daily/en/signup">Sign up</a>
+          <a class="menu-button" href="https://tipmaster.net/daily/en/football-fantasy-manager" aria-label="Open Tipmaster menu"><span></span><span></span><span></span></a>
+        </div>
       </nav>
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">WORLD CUP · MATCHDAY INTELLIGENCE</p>
-          <h1>Weniger Bauchgefühl.<br /><em>Mehr Kontext.</em></h1>
-          <p class="lede">Ein erklärbarer Entscheidungsdesk, der Spiele vergleicht, Unsicherheit sichtbar macht und deine persönliche Watchlist baut.</p>
+          <p class="eyebrow" id="hero-eyebrow">WORLD CUP · MATCHDAY INTELLIGENCE</p>
+          <h1 id="hero-title">Weniger Bauchgefühl.<br /><em>Mehr Kontext.</em></h1>
+          <p class="lede" id="hero-lede">Ein erklärbarer Entscheidungsdesk, der Spiele vergleicht, Unsicherheit sichtbar macht und deine persönliche Watchlist baut.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#matches">Spiele analysieren</a>
+            <a class="button primary" id="primary-cta" href="#matches">Spiele analysieren</a>
             <button class="button ghost" id="explain-model">Modell verstehen</button>
           </div>
         </div>
         <aside class="model-card" aria-label="Modellstatus">
           <div class="model-top"><span>DECISION MODEL</span><span class="live">TRANSPARENT</span></div>
           <div class="score-ring"><strong>8</strong><span>agent tools</span></div>
-          <p>Teamstärke, Form, Angriff, Defensive und Volatilität — deterministisch gewichtet, ohne Black Box.</p>
-          <div class="safety-row"><span>✓ Keine Live-Wetten</span><span>✓ Keine Nutzerdaten</span></div>
+          <p id="model-copy">Teamstärke, Form, Angriff, Defensive und Volatilität — deterministisch gewichtet, ohne Black Box.</p>
+          <div class="safety-row" id="safety-copy"><span>✓ Keine Live-Wetten</span><span>✓ Keine Nutzerdaten</span></div>
         </aside>
       </div>
     </header>
 
     <main>
       <section class="control-bar" aria-label="Präferenzen">
-        <label>Dein Blickwinkel
+        <label><span id="lens-label">Dein Blickwinkel</span>
           <select id="risk-profile">
             <option value="balanced">Ausgewogen</option>
             <option value="safe">Favoriten zuerst</option>
             <option value="upset">Upset-Potenzial</option>
           </select>
         </label>
-        <label>Lieblingsteam
+        <label><span id="team-label">Lieblingsteam</span>
           <select id="favorite-team"><option value="">Kein Favorit</option></select>
         </label>
         <button class="button compact" id="save-preferences">Ansicht anwenden</button>
@@ -53,8 +59,8 @@
 
       <section id="matches" class="section">
         <div class="section-heading">
-          <div><p class="eyebrow">CURATED SCENARIOS</p><h2>Entscheidende Duelle</h2></div>
-          <p>Prototype scenarios · keine Live-Daten oder Wettberatung</p>
+          <div><p class="eyebrow" id="scenario-eyebrow">CURATED SCENARIOS</p><h2 id="scenario-title">Entscheidende Duelle</h2></div>
+          <p id="scenario-note">Prototype scenarios · keine Live-Daten oder Wettberatung</p>
         </div>
         <div id="match-grid" class="match-grid"></div>
       </section>
@@ -62,11 +68,11 @@
       <section class="analysis-layout section" aria-live="polite">
         <article id="analysis-panel" class="analysis-panel">
           <p class="eyebrow">MATCH EXPLAINER</p>
-          <h2>Wähle ein Spiel</h2>
-          <p class="muted">Jede Prognose zeigt nicht nur das Ergebnis, sondern auch Unsicherheit und den stärksten Gegenfaktor.</p>
+          <h2 id="analysis-title">Wähle ein Spiel</h2>
+          <p class="muted" id="analysis-copy">Jede Prognose zeigt nicht nur das Ergebnis, sondern auch Unsicherheit und den stärksten Gegenfaktor.</p>
         </article>
         <aside class="shortlist-panel">
-          <div class="section-heading tight"><div><p class="eyebrow">DEINE AUSWAHL</p><h2>Watchlist</h2></div><span id="shortlist-count">0 / 3</span></div>
+          <div class="section-heading tight"><div><p class="eyebrow" id="shortlist-eyebrow">DEINE AUSWAHL</p><h2>Watchlist</h2></div><span id="shortlist-count">0 / 3</span></div>
           <div id="shortlist" class="shortlist-empty">Noch leer. Füge bis zu drei Spiele hinzu.</div>
         </aside>
       </section>
@@ -74,8 +80,8 @@
       <section class="agent-section section">
         <div>
           <p class="eyebrow">BUILT FOR HUMANS + AGENTS</p>
-          <h2>Eine Oberfläche.<br />Acht klare Fähigkeiten.</h2>
-          <p>Die sichtbare UI und WebMCP verwenden dieselbe geprüfte Entscheidungslogik. Agenten müssen weder den DOM erraten noch versteckte Klickpfade nachahmen.</p>
+          <h2 id="agent-title">Eine Oberfläche.<br />Acht klare Fähigkeiten.</h2>
+          <p id="agent-copy">Die sichtbare UI und WebMCP verwenden dieselbe geprüfte Entscheidungslogik. Agenten müssen weder den DOM erraten noch versteckte Klickpfade nachahmen.</p>
         </div>
         <ol id="tool-list" class="tool-list"></ol>
       </section>

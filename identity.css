@@ -13,11 +13,20 @@
 }
 
 body { background: #f8fafc; color: var(--ink); }
-.hero { background: radial-gradient(circle at 80% 25%, rgba(61, 138, 92, .25), transparent 32%), linear-gradient(145deg, #0a0e1a, #0f172a 72%, #111827); color: #fff; border-bottom: 0; }
+.hero { background-color: #0f172a; background-image: linear-gradient(90deg, rgba(15, 23, 42, .97) 0%, rgba(15, 23, 42, .82) 55%, rgba(15, 23, 42, .55) 100%), url("https://tipmaster.net/img/og/trophy-hero.jpg"); background-size: cover; background-position: center; color: #fff; border-bottom: 0; }
 .brand-logo { width: 48px; height: 48px; object-fit: contain; }
 .concept-label { padding-left: .75rem; border-left: 1px solid #334155; color: #cbd5e1; font-size: .7rem; font-weight: 800; letter-spacing: .14em; }
 .brand b, .eyebrow { color: #ffcc33; }
 .status { color: #cbd5e1; }
+.nav-actions { display: flex; align-items: center; gap: 1rem; }
+.language-toggle { border: 1px solid #475569; border-radius: 999px; background: transparent; color: #fff; padding: .45rem .7rem; font: inherit; font-size: .72rem; font-weight: 800; cursor: pointer; }
+.language-toggle:hover, .language-toggle:focus-visible { border-color: #ffcc33; color: #ffcc33; }
+.nav-link { color: #fff; text-decoration: none; font-size: .78rem; font-weight: 700; }
+.nav-link:hover, .nav-link:focus-visible { color: #ffcc33; }
+.signup-link { border-radius: 999px; background: #ffcc33; color: #1f2937; padding: .55rem .9rem; text-decoration: none; font-size: .78rem; font-weight: 800; }
+.menu-button { width: 2.25rem; height: 2.25rem; border: 1px solid #475569; border-radius: .55rem; display: grid; place-content: center; gap: 3px; }
+.menu-button span { display: block; width: 14px; height: 2px; background: #fff; }
+@media (max-width: 720px) { .status, .nav-link { display: none; } .concept-label { display: none; } .brand-logo { width: 40px; height: 40px; } }
 .pulse { background: #86efac; box-shadow: 0 0 0 .35rem rgba(134, 239, 172, .12); }
 .hero h1 em { color: #ffcc33; }
 .lede { color: #e2e8f0; }
