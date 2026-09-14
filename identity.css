@@ -1,0 +1,58 @@
+/* Alignment with Tipmaster's observed product identity: navy, white, yellow CTA and trust green. */
+:root {
+  --ink: #09090b;
+  --panel: #0f172a;
+  --paper: #ffffff;
+  --lime: #ffcc33;
+  --mint: #86efac;
+  --orange: #dc5f45;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  color-scheme: light;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body { background: #f8fafc; color: var(--ink); }
+.hero { background: radial-gradient(circle at 80% 25%, rgba(61, 138, 92, .25), transparent 32%), linear-gradient(145deg, #0a0e1a, #0f172a 72%, #111827); color: #fff; border-bottom: 0; }
+.brand-logo { width: 48px; height: 48px; object-fit: contain; }
+.concept-label { padding-left: .75rem; border-left: 1px solid #334155; color: #cbd5e1; font-size: .7rem; font-weight: 800; letter-spacing: .14em; }
+.brand b, .eyebrow { color: #ffcc33; }
+.status { color: #cbd5e1; }
+.pulse { background: #86efac; box-shadow: 0 0 0 .35rem rgba(134, 239, 172, .12); }
+.hero h1 em { color: #ffcc33; }
+.lede { color: #e2e8f0; }
+.button { background: #3d8a5c; border-color: #3d8a5c; color: #fff; }
+.button:hover, .button:focus-visible { border-color: #ffcc33; }
+.button.primary { background: #ffcc33; border-color: #ffcc33; color: #1f2937; }
+.button.ghost { background: transparent; border-color: #94a3b8; color: #fff; }
+.model-card { background: rgba(255, 255, 255, .07); border-color: rgba(255, 255, 255, .16); }
+.live, .safety-row { color: #86efac; }
+.score-ring { border-color: #ffcc33; box-shadow: inset 0 0 2rem rgba(255, 204, 51, .08); }
+.score-ring span, .model-card > p { color: #cbd5e1; }
+.control-bar { background: #fff; border-color: #e2e8f0; color: #09090b; box-shadow: 0 12px 32px rgba(15, 23, 42, .12); }
+.control-bar label { color: #475569; }
+.control-bar select { background: #fff; border-color: #cbd5e1; color: #09090b; }
+.control-bar .muted { color: #64748b; }
+.section .eyebrow { color: #3d8a5c; }
+.match-card { border: 1px solid #e2e8f0; box-shadow: 0 8px 24px rgba(15, 23, 42, .07); }
+.match-card::before { background: #ffcc33; }
+.prediction { background: #f1f5f9; }
+.meter { background: #e2e8f0; }
+.meter > span { background: #3d8a5c; }
+.card-actions button:first-child { background: #0f172a; }
+.analysis-panel { background: #fff; color: #09090b; border-color: #e2e8f0; box-shadow: 0 8px 24px rgba(15, 23, 42, .06); }
+.analysis-panel .muted { color: #64748b; }
+.analysis-panel .kpi { background: #f1f5f9; }
+.analysis-panel .kpi span { color: #64748b; }
+.factor-list li::before { color: #3d8a5c; }
+.shortlist-panel { background: #0f172a; color: #fff; border-color: #1e293b; }
+.shortlist-panel .eyebrow { color: #ffcc33; }
+.shortlist-panel .muted, .shortlist-empty { color: #94a3b8; }
+.shortlist-item { border-color: #334155; }
+.agent-section { background: linear-gradient(135deg, #f1f5f9, #fff); color: #09090b; border-top: 1px solid #e2e8f0; }
+.agent-section .eyebrow { color: #3d8a5c; }
+.tool-list li { border-color: #e2e8f0; box-shadow: 0 4px 14px rgba(15, 23, 42, .05); }
+dialog { background: #0f172a; color: #fff; border-color: #334155; }
+footer { background: #0a0e1a; color: #94a3b8; }
+.footer-brand { display: flex; align-items: center; gap: .65rem; }
+.footer-brand img { width: 28px; height: 28px; object-fit: contain; opacity: .85; }
