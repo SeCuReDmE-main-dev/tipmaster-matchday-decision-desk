@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ein transparenter, agentenfähiger Matchday-Entscheidungsdesk für World-Cup-Fans." />
+    <meta name="theme-color" content="#081a17" />
+    <title>Matchday Decision Desk — Tipmaster Concept</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#matches">Zum Spielplan springen</a>
+    <header class="hero">
+      <nav aria-label="Hauptnavigation">
+        <div class="brand"><span class="brand-mark">T</span><span>TIPMASTER <b>LAB</b></span></div>
+        <div class="status"><span class="pulse"></span><span id="agent-status">UI ready · checking WebMCP</span></div>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">WORLD CUP · MATCHDAY INTELLIGENCE</p>
+          <h1>Weniger Bauchgefühl.<br /><em>Mehr Kontext.</em></h1>
+          <p class="lede">Ein erklärbarer Entscheidungsdesk, der Spiele vergleicht, Unsicherheit sichtbar macht und deine persönliche Watchlist baut.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#matches">Spiele analysieren</a>
+            <button class="button ghost" id="explain-model">Modell verstehen</button>
+          </div>
+        </div>
+        <aside class="model-card" aria-label="Modellstatus">
+          <div class="model-top"><span>DECISION MODEL</span><span class="live">TRANSPARENT</span></div>
+          <div class="score-ring"><strong>8</strong><span>agent tools</span></div>
+          <p>Teamstärke, Form, Angriff, Defensive und Volatilität — deterministisch gewichtet, ohne Black Box.</p>
+          <div class="safety-row"><span>✓ Keine Live-Wetten</span><span>✓ Keine Nutzerdaten</span></div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="control-bar" aria-label="Präferenzen">
+        <label>Dein Blickwinkel
+          <select id="risk-profile">
+            <option value="balanced">Ausgewogen</option>
+            <option value="safe">Favoriten zuerst</option>
+            <option value="upset">Upset-Potenzial</option>
+          </select>
+        </label>
+        <label>Lieblingsteam
+          <select id="favorite-team"><option value="">Kein Favorit</option></select>
+        </label>
+        <button class="button compact" id="save-preferences">Ansicht anwenden</button>
+        <p id="preference-note" class="muted" role="status">Lokal für diese Sitzung — nichts wird gespeichert.</p>
+      </section>
+
+      <section id="matches" class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow">CURATED SCENARIOS</p><h2>Entscheidende Duelle</h2></div>
+          <p>Prototype scenarios · keine Live-Daten oder Wettberatung</p>
+        </div>
+        <div id="match-grid" class="match-grid"></div>
+      </section>
+
+      <section class="analysis-layout section" aria-live="polite">
+        <article id="analysis-panel" class="analysis-panel">
+          <p class="eyebrow">MATCH EXPLAINER</p>
+          <h2>Wähle ein Spiel</h2>
+          <p class="muted">Jede Prognose zeigt nicht nur das Ergebnis, sondern auch Unsicherheit und den stärksten Gegenfaktor.</p>
+        </article>
+        <aside class="shortlist-panel">
+          <div class="section-heading tight"><div><p class="eyebrow">DEINE AUSWAHL</p><h2>Watchlist</h2></div><span id="shortlist-count">0 / 3</span></div>
+          <div id="shortlist" class="shortlist-empty">Noch leer. Füge bis zu drei Spiele hinzu.</div>
+        </aside>
+      </section>
+
+      <section class="agent-section section">
+        <div>
+          <p class="eyebrow">BUILT FOR HUMANS + AGENTS</p>
+          <h2>Eine Oberfläche.<br />Acht klare Fähigkeiten.</h2>
+          <p>Die sichtbare UI und WebMCP verwenden dieselbe geprüfte Entscheidungslogik. Agenten müssen weder den DOM erraten noch versteckte Klickpfade nachahmen.</p>
+        </div>
+        <ol id="tool-list" class="tool-list"></ol>
+      </section>
+    </main>
+
+    <dialog id="model-dialog">
+      <button class="dialog-close" aria-label="Dialog schließen">×</button>
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>Erklärbar statt allwissend</h2>
+      <p>Der Prototyp kombiniert fünf kuratierte Signale. Die Ausgabe ist reproduzierbar und nennt bewusst einen Gegenfaktor. Das ist eine Produktdemonstration, keine Echtzeitprognose und keine Finanzberatung.</p>
+      <div class="weights"><span>Stärke 35%</span><span>Form 25%</span><span>Angriff 18%</span><span>Defensive 14%</span><span>Volatilität 8%</span></div>
+    </dialog>
+
+    <footer><span>Tipmaster Matchday Decision Desk · product concept</span><span>Privacy-first · session-only state</span></footer>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
